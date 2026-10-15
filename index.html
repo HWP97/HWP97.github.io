@@ -78,7 +78,7 @@
       padding: 0 24px;
     }
 
-    section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+    section { padding: 40px 0; border-bottom: 1px solid var(--border); }
     section:last-child { border-bottom: none; }
 
     h2.section-title {
@@ -87,12 +87,12 @@
       letter-spacing: .08em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 32px;
+      margin-bottom: 20px;
     }
 
     /* HERO */
     #hero {
-      padding: 80px 0 64px;
+      padding: 56px 0 40px;
       border-bottom: 1px solid var(--border);
     }
     .hero-grid {
@@ -181,9 +181,9 @@
     /* PUBLICATIONS */
     .pub-card {
       display: grid;
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 1fr;
       gap: 20px;
-      padding: 20px 0;
+      padding: 14px 0;
       border-bottom: 1px solid var(--border);
       align-items: start;
     }
@@ -322,6 +322,15 @@
       nav ul { gap: 16px; }
       .hero-name { font-size: 30px; }
     }
+    /* PRINT */
+    @media print {
+      nav { display: none; }
+      #hero { padding: 0 0 24px; }
+      section { padding: 24px 0; }
+      h2.section-title { margin-bottom: 14px; }
+      .pub-card, .news-item, .timeline-item, .interest-card, .skill-group { break-inside: avoid; page-break-inside: avoid; }
+      h2.section-title, h3 { break-after: avoid; page-break-after: avoid; }
+    }
   </style>
 </head>
 <body>
@@ -445,7 +454,6 @@
 
     <!-- CVPR 2025 -->
     <div class="pub-card">
-      <div class="pub-thumb">🔮</div>
       <div>
         <span class="pub-venue">CVPR 2025</span>
         <div class="pub-title">DropGaussian: Structural Regularization for Sparse-View Gaussian Splatting</div>
@@ -459,7 +467,6 @@
 
     <!-- VCIP 2023 -->
     <div class="pub-card">
-      <div class="pub-thumb">🎥</div>
       <div>
         <span class="pub-venue">VCIP 2023</span>
         <div class="pub-title">Multi-Scale and Multi-View Feature Blending for Free-Viewpoint Rendering of Dynamic Humans</div>
@@ -472,7 +479,6 @@
 
     <!-- CVPR 2023 -->
     <div class="pub-card">
-      <div class="pub-thumb">🧍</div>
       <div>
         <span class="pub-venue">CVPR 2023</span>
         <div class="pub-title">Sampling is Matter: Point-Guided 3D Human Mesh Reconstruction</div>
@@ -485,10 +491,9 @@
     </div>
 
     <!-- Domestic -->
-    <div style="margin-top: 32px; margin-bottom: 12px; font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em;">Domestic Conference</div>
+    <div style="margin-top: 24px; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em;">Domestic Conference</div>
 
     <div class="pub-card">
-      <div class="pub-thumb" style="height:60px; font-size:22px;">🇰🇷</div>
       <div>
         <span class="pub-venue" style="background:#64748b;">IPIU 2025</span>
         <span class="pub-venue" style="background:#ca8a04; margin-left:4px;">Bronze Award</span>
@@ -498,7 +503,6 @@
     </div>
 
     <div class="pub-card">
-      <div class="pub-thumb" style="height:60px; font-size:22px;">🇰🇷</div>
       <div>
         <span class="pub-venue" style="background:#64748b;">IPIU 2023</span>
         <div class="pub-title">표면 다양화 가이드 모듈을 이용한 사람 객체 렌더링 방법</div>
@@ -570,7 +574,7 @@
       </div>
     </div>
 
-    <div style="margin-top: 32px; margin-bottom: 12px; font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em;">Research Projects</div>
+    <div style="margin-top: 24px; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em;">Research Projects</div>
 
     <div class="timeline-item">
       <div class="timeline-period">Jan. 2023 –<br/>Dec. 2023</div>
